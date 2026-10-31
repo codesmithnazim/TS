@@ -1,1 +1,0 @@
-let message = "Asalam o Alaikum TS"
