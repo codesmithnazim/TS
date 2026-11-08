@@ -31,6 +31,15 @@ function chaiRelated() {
         }
     }
     console.log(makeChai({ name: "masala chai", spiceLevel: 12 }));
+    function usageOfInOperator(chai) {
+        if ('spiceLevel' in chai) {
+            return console.log("you have ordered masala chai");
+        }
+        else if ("aroma" in chai) {
+            return console.log("the tea is elaichi");
+        }
+    }
+    usageOfInOperator({ name: "ginger chai", amount: 12 });
 }
 chaiRelated();
 //# sourceMappingURL=typeNarrowing.js.map
