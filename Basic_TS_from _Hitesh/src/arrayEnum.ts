@@ -25,7 +25,25 @@ enum cupSize {
   small = "100ml",
   medium = "200ml",
   large = "250ml",
-  custom = "custom ",
+  custom = "custom",
 }
 
 console.log("I want to drink ", cupSize.medium, " of tee");
+type chaiTypes = "masala" | "elaichi" | "ginger"
+
+const makechai =(chai : chaiTypes , howMuch : cupSize)=>{
+    console.log("we are preparing your : ", howMuch , chai, " chai")
+}
+
+
+makechai ( "elaichi", cupSize.medium)
+
+
+let t1: [string, number ]= ["masala", 2]
+let t2: (string | number )[]= ["elaichi", 1]
+let t3: Array<string | number >= ["ginger", 1.2]
+
+console.log("All the tea(s) \n", t1, "\n", t2 , "\n", t3)
+
+type practiceArray = readonly [string , number , boolean]
+let newArray2 : practiceArray = ["name", 3068564997, true]

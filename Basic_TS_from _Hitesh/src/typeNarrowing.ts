@@ -29,9 +29,9 @@ function chaiRelated() {
     );
   }
 
-  type masalaChai = {name : "masala chai", spiceLevel: number }
-  type gingerChai = {name : "ginger chai", amount: number}
-  type elaichiChai = {name : "Elaichi chai", aroma: string}
+  type masalaChai = {name : "masala chai", spiceLevel?: number }
+  type gingerChai = {name : "ginger chai", amount?: number}
+  type elaichiChai = {name : "Elaichi chai", aroma?: string}
 
 let newMasalaChai : masalaChai = {name :"masala chai" ,spiceLevel: 12}
 console.log("the new chai info = ", newMasalaChai)

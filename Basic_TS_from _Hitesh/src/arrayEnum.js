@@ -11,9 +11,17 @@ let firstStd = ["ali", 123];
 console.log(firstStd);
 var cupSize;
 (function (cupSize) {
-  cupSize["small"] = "100ml";
-  cupSize["medium"] = "200ml";
-  cupSize["large"] = "250ml";
-  cupSize["custom"] = "custom ";
+    cupSize["small"] = "100ml";
+    cupSize["medium"] = "200ml";
+    cupSize["large"] = "250ml";
+    cupSize["custom"] = "custom";
 })(cupSize || (cupSize = {}));
 console.log("I want to drink ", cupSize.medium, " of tee");
+const makechai = (chai, howMuch) => {
+    console.log("we are preparing your : ", howMuch, chai, " chai");
+};
+makechai("elaichi", cupSize.medium);
+let t1 = ["masala", 2];
+let t2 = ["elaichi", 1];
+let t3 = ["ginger", 1.2];
+console.log("All the tea(s) \n", t1, "\n", t2, "\n", t3);
