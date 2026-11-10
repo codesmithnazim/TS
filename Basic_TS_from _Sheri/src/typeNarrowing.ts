@@ -1,4 +1,3 @@
-
 function chaiRelated() {
   type chaiOrder = {
     type: string;
@@ -29,46 +28,40 @@ function chaiRelated() {
     );
   }
 
-  type masalaChai = {name : "masala chai", spiceLevel: number }
-  type gingerChai = {name : "ginger chai", amount: number}
-  type elaichiChai = {name : "Elaichi chai", aroma: string}
+  type masalaChai = { name: "masala chai"; spiceLevel: number };
+  type gingerChai = { name: "ginger chai"; amount: number };
+  type elaichiChai = { name: "Elaichi chai"; aroma: string };
 
-let newMasalaChai : masalaChai = {name :"masala chai" ,spiceLevel: 12}
-console.log("the new chai info = ", newMasalaChai)
+  let newMasalaChai: masalaChai = { name: "masala chai", spiceLevel: 12 };
+  console.log("the new chai info = ", newMasalaChai);
 
+  type order = masalaChai | gingerChai | elaichiChai;
 
-type order = masalaChai | gingerChai | elaichiChai
-
-function makeChai(chai: order) {
-    switch(chai.name){
-        case "ginger chai": 
-        {
-            console.log("we started the production of ", chai.name )
-            break;
-        }
-        case "Elaichi chai": 
-        return "we will serve elaichi chai very soon"
+  function makeChai(chai: order) {
+    switch (chai.name) {
+      case "ginger chai": {
+        console.log("we started the production of ", chai.name);
         break;
-        default:
-            return " by default we'll always server masala chai"
+      }
+      case "Elaichi chai": {
+        return "we will serve elaichi chai very soon";
+        break;
+      }
+      default:
+        return " by default we'll always server masala chai";
     }
-    
-}
-console.log( makeChai( {name : "masala chai", spiceLevel : 12}))
-
-function usageOfInOperator (chai:masalaChai | gingerChai) {
-  if('spiceLevel' in chai)
-  {
-   return console.log("you have ordered masala chai")
   }
-  else if ("aroma" in chai){
-    return console.log("the tea is elaichi")
+  console.log(makeChai({ name: "masala chai", spiceLevel: 12 }));
+
+  function usageOfInOperator(chai: masalaChai | gingerChai) {
+    if ("spiceLevel" in chai) {
+      return console.log("you have ordered masala chai");
+    } else if ("aroma" in chai) {
+      return console.log("the tea is elaichi");
+    }
   }
-  
-}
 
-usageOfInOperator({name : "ginger chai", amount : 12})
-
+  usageOfInOperator({ name: "ginger chai", amount: 12 });
 }
 
 chaiRelated();
