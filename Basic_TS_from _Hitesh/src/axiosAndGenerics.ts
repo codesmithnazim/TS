@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 type posts = {
-  userId: number;
+  userId: string;
   id: number;
   title: string;
   body: string;
@@ -10,9 +10,10 @@ type posts = {
 };
 
 try {
-  const response: AxiosResponse<posts> = await axios.get(
+  const response : AxiosResponse<posts[]> = await axios.get(
     "https://json-placeholder.mock.beeceptor.com/posts",
   );
+  response.data[0]?.userId.toUpperCase()
   console.log("Our response from the dummy API", response.data);
 } catch (error: any) {
   if (axios.isAxiosError(error)) {
@@ -21,4 +22,5 @@ try {
       console.log(error.response.status);
     }
   }
+  else console.log(error)
 }
