@@ -1,7 +1,7 @@
 import axios from "axios";
 try {
     const response = await axios.get("https://json-placeholder.mock.beeceptor.com/posts");
-    response.data[0]?.userId.toUpperCase();
+    // response.data[0]?.userId.toUpperCase();
     console.log("Our response from the dummy API", response.data);
 }
 catch (error) {
@@ -14,3 +14,9 @@ catch (error) {
     else
         console.log(error);
 }
+const testFunction = (firstArg) => {
+    console.log(firstArg);
+    if (typeof firstArg === "string")
+        console.log(firstArg.toUpperCase());
+};
+testFunction("InshaAllah Allah will be help me ");
